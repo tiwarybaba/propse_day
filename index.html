@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Propose Day Bubba</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            color: black;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .yes-btn {
+            background: green;
+            color: white;
+        }
+
+        .no-btn {
+            background: red;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+        .response {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💖 Happy Propose Day Bubba 💖</h1>
+        <p class="message">Will you be mine? 🥰</p>
+        <button class="btn yes-btn" onclick="sayYes()">Yes</button>
+        <button class="btn no-btn" onclick="sayNo()">No</button>
+        <p class="response"></p>
+    </div>
+
+    <script>
+        let noClickCount = 0;
+
+        function sayYes() {
+            document.querySelector('.response').innerHTML = "I love you, mole,kudu kudu goi hoppy ❤️";
+        }
+
+        function sayNo() {
+            const responses = [
+                "Please na bubba 🥺",
+                "Baby please, I am your bubba na 😢",
+                "Bubba mole hoppy, please say yes 🙏"
+            ];
+
+            if (noClickCount < responses.length) {
+                document.querySelector('.response').innerHTML = responses[noClickCount];
+                noClickCount++;
+            }
+        }
+    </script>
+</body>
+</html>
